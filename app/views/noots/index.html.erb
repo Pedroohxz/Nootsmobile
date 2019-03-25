@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Notas - Noots</title>
+
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+</head>
+
+<body>
+<!-- AREA DE MENU-->
+   
+
+<section id="interface"> 
+
+<div id="top">
+  
+    <h1 id="titulo"><center>Notas por Bimestre</center></h1>
+  
+</div>
+       <section id="materias" >
+       
+
+       <table>
+         <thead>
+           <tr>
+             <th>Materia</th>
+             <th><center>Mensal</center></th>
+             <th><center>Bimestral</center></th>
+            
+<th>
+    <select id="#" class="nice-select">
+        <option>Bimestre</option>
+        <option>1º Bimestre</option>  
+        <option>2º Bimestre</option>
+        <option>3º Bimestre</option>
+        <option>4º Bimestre</option>
+    </select>
+</th>
+             <th>
+             
+             <a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a">Actions...</a>
+<div data-role="popup" id="popupMenu" data-theme="b">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;">
+            <li data-role="list-divider">Choose an action</li>
+            <li><a href="#">View details</a></li>
+            <li><a href="#">Edit</a></li>
+            <li><a href="#">Disable</a></li>
+            <li><a href="#">Delete</a></li>
+        </ul>
+</div>
+</th>
+           </tr>
+         </thead>
+
+         <tbody>
+           <% @noots.each do |noot| %>
+             <tr id=<%= noot.bimestre %> class="corpo">
+               <td><%= noot.materia %></td>
+               <td id="nm" onLoad="style='color:blue'"><center><%= noot.nota_mensal %></center></td>
+               <td id="nb"><center><%= noot.nota_bimestral %></center></td>
+            
+             
+               <td class="bimestre"><center><%= noot.bimestre %></center></td>
+           
+               <td><%= link_to 'Média', noot %></td>
+               <td><%= link_to 'Editar', edit_noot_path(noot) %></td>
+               <td><%= link_to 'Excluir', noot, method: :delete, data: { confirm: 'Tem Certeza?' }, id:"delete" %></td>
+               
+               </tr>
+           <% end %>
+         </tbody>
+       </table>
+
+       <br>
+      
+       <%= link_to 'Nova Nota', materias_path %>
+      
+
+
+
+       
+      </section>
+      
+    </section>
+
+  
+        <div id="circlemenu">a</div>
+ 
+    <section class="menu-left">
+      <section id="fixed">
+        
+ 
+        <div id="circlematerias2"  onclick="window.location='/';"></div>
+    
+
+        <div id="circlenoots2"></div>
+        <div id="circlelownoots2" onclick="window.location='/lownoots';"></div>
+    
+    </section>
+</section>
+    </div>
+  </body>
+</html>

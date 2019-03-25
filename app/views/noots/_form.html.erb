@@ -1,0 +1,55 @@
+<%= form_with(model: noot, local: true) do |form| %>
+  <% if noot.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(noot.errors.count, "error") %> prohibited this noot from being saved:</h2>
+
+      <ul>
+      <% noot.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <%= form_for @noot do |f| %>
+<div class="field">
+  <%= form.label :materia %>
+
+
+    <% categories_array = Noot.all.map { |noot| [noot.materia] } %>
+    <% materias = ["Português", "Literatura", "Redação", "Matemática", "Física", "Química", "Biologia", "Sociologia", "Filosofia", "História", "Geografia", "Inglês", "Espanhol", "Ed.Ambiental", "Ed.Física", "Artes"]%>
+    <%= select_tag "search", options_for_select(categories_array, noot.materia) %>
+
+
+
+     
+  </div>
+
+  <div class="field">
+    <%= form.label :nota_mensal %>
+   
+    <%= form.text_field :nota_mensal, id: :noot_nota_mensal %>
+    </div>
+
+  <div class="field">
+    <%= form.label :nota_bimestral %>
+    
+    <%= form.text_field :nota_bimestral, id: :noot_nota_bimestral %>
+  </div>
+
+  <div class="field2">
+  <%= form.label :bimestre %>
+ 
+  <%= form.text_field :bimestre, id: :noot_bimestre %>
+  </div>
+
+  <div class="actions">
+ 
+  <%= f.submit "Salvar", class: "btn waves-effect waves-light"%>
+  <% end %>
+   
+
+  </div>
+  <% end %>
+  

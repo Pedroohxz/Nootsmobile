@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Editar - Noots</title>
+
+
+
+</head>
+
+<body>
+<!-- AREA DE MENU-->
+    <section class="menu-left">
+
+                <center><label id="logo">Noots</label></center>
+
+                <div id="item1" >
+                <a id="a1" href="/">Adicionar Notas</a>
+                </div>
+                <div id="item2">
+                    <a id="a2" href="/noots">Médias</a>
+                </div>
+                <div id="item3">
+                    <a id="a3" href="/lownoots">Piores Notas</a>
+                </div>
+        </section>
+        
+
+<section id="interface">
+
+    <h1>Editar Nota (<%= @noot.materia %>)</h1>
+        <section id="materias" > 
+           
+            <%= render 'form', noot: @noot %>
+
+            <%= link_to 'Show', @noot %> |
+            <%= link_to 'Back', noots_path %>
+        
+            </section>
+    </section>
+
+</body>
+</html>
