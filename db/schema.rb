@@ -10,16 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181206221241) do
-
-  create_table "materia", force: :cascade do |t|
-    t.string "materia"
-    t.float "nota_mensal"
-    t.float "nota_bimestral"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "bimestre"
-  end
+ActiveRecord::Schema.define(version: 20190406201510) do
 
   create_table "noots", force: :cascade do |t|
     t.string "materia"
@@ -29,12 +20,13 @@ ActiveRecord::Schema.define(version: 20181206221241) do
     t.datetime "updated_at", null: false
     t.integer "bimestre"
     t.float "media"
+    t.string "name"
+    t.integer "pass"
   end
 
-  create_table "testes", force: :cascade do |t|
-    t.string "materia"
-    t.float "nota_mensal"
-    t.float "nota_bimestral"
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.integer "pass"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

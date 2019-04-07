@@ -4,10 +4,6 @@
 //= require turbolinks
 //= require materialize-sprockets
 //= require_tree .
-window.onload = function() {
-            $("#mask").fadeOut(0);
-        $("#pop-up").fadeOut();
-          };
 
 
 

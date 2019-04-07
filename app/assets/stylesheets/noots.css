@@ -99,7 +99,7 @@ section.menu-left {
     background-repeat:no-repeat;
     background-size: 60%;
     background-position: center;
-    background-color: dimgrey;
+    background-color: dimgrey;  
   
   margin-left: 25%;
   margin-top: 33%;
@@ -902,7 +902,7 @@ ul#mensal {
     vertical-align: middle;
     border-radius: 2px;
     font-weight: 400;
-    font-size: 43pt;
+    font-size: 41pt;
     
     
   }
