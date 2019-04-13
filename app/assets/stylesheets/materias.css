@@ -93,12 +93,13 @@ div#item2:hover, div#item3:hover, div#item1b:hover{
 }
 section#materias {
     background-color: #0079CC;
-   margin-top:-40px;
+  
     padding-bottom: 120px;
     padding-left: 10px;
     margin-right: 80px;
     padding-right: 10px;
     width: 100vw;
+    margin-top: 1px;
 }
 section#materias span {
     position: fixed;
@@ -224,6 +225,7 @@ section#materias h1{
     color: white;
     font-family: 'Ubuntu';
     font-weight: 600;
+    margin-top: 0px;
 }
 /*ANIMAÇÃO NO CIRCULO DE MATÉRIAS TIPO: 1*/
 
@@ -526,4 +528,11 @@ section.menu-left {
     top:0;
     display: none;
 
+}
+div#teste {
+    font-size: 16pt;
+    font-family: 'Roboto';
+    padding: 20px;
+   
+   
 }

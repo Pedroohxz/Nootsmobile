@@ -1,5 +1,5 @@
 class CreateMateria < ActiveRecord::Migration[5.1]
-  def change
+  def create
     create_table :materia do |t|
 
       t.timestamps

@@ -5,7 +5,7 @@
     <title>Máterias - Noots</title>
 
    
-  <script src="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+ 
 
     <script type="text/javascript">
 
@@ -120,19 +120,30 @@
 <body>
 
 
- 
-
     <div id="mask"></div>
 
     <section class="interface">
+     
        <section id="materias" >
-       
 
+      
 
             <center><h1>Escolha a matéria desejada.</h1></center>
-            <center><h2 style="color:white;"><%= Materium.pessoa(User.search.to_s()) %></h2></center>
+            <center><h2 style="color:white;"><%= Materium.pessoa(current_user.email) %></h2></center>
          
-         
+          <div id="teste">
+            <p class="navbar-text pull-right">
+            <% if user_signed_in? %>
+            Logado como: <strong><%= current_user.email %></strong>.
+            <%= link_to 'Editar perfil', edit_user_registration_path, :class => 'navbar-link' %> |
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+        <% else %>
+            <%= link_to "Registrar-se", new_user_registration_path, :class => 'navbar-link'  %> |
+            <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+<% end %>
+
+ <div>
+
             <ul id="tochoosematerias">
             <center>
                 <li id="m1" class="hvr-outline2-out">

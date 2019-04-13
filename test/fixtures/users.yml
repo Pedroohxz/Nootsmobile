@@ -2,8 +2,16 @@
 
 one:
   name: MyString
+<<<<<<< HEAD
   pass: 1
 
 two:
   name: MyString
   pass: 1
+=======
+  kind: 1
+
+two:
+  name: MyString
+  kind: 1
+>>>>>>> db72797370395b686635c9a0aba057901af7da88

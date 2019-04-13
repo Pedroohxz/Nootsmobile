@@ -1,10 +1,11 @@
 // Inclua nas versões quando rails >= 5.1
-//= require jquerymobile
 // Sempre inclua
 //= require turbolinks
 //= require materialize-sprockets
 //= require_tree .
-
+// Add following lines.
+//= require jquery 
+//= require jquery_ujs
 
 
 $(document).ready(function() {
@@ -175,4 +176,12 @@ $(document).ready(function() {
         /*
 Reference: http://jsfiddle.net/BB3JK/47/
 */
+    
+    
 });
+
+function refresh() {
+        location.reload();
+
+    }
+    

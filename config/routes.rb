@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
+  devise_for :users, :controllers => { :registrations =>
+    'users/registrations' }
+  
+    get '/sign_out' => 'users/sessions#destroy'
+
   resources :users
+  
   resources :noots
   resources :materias
   resources :create
   resources :lownoots
-  root 'materias#index'
+  root to: 'materias#index'
   
  
  

@@ -8,14 +8,14 @@ end
 
 #ruby "2.5.3"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.6'
+gem 'rails', '~> 5.2.3'
 
 gem 'ruby-debug-ide', '~> 0.6.1'
 gem 'debase', '~> 0.2.2'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
-gem 'sass'
+
 gem 'sass-rails', '~> 5.0'
 gem 'compass', '~> 1.0', '>= 1.0.3'
 gem "sprockets-sass"
@@ -30,8 +30,8 @@ gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks'
 # Jquery Gem
+gem 'jquery-rails'
 
-gem 'jquerymobile-rails', '~> 0.2.3'
 # Materalize Gem
 gem 'materialize-sass'
 gem 'material_icons'
@@ -42,6 +42,8 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'sqlite3', '~> 1.3.13'
+gem 'devise'
+gem 'cancancan'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

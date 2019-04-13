@@ -3,11 +3,13 @@
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( noots.css )
+Rails.application.config.assets.precompile += %w( users.css )
+Rails.application.config.assets.precompile += %w( users.js )
 Rails.application.config.assets.precompile += %w( materias.css )
 Rails.application.config.assets.precompile += %w( materialize.scss )
 Rails.application.config.assets.precompile += %w( lownoots.css )
 Rails.application.config.assets.precompile += %w( jquery.mobile-1.4.5.js )
-Rails.application.config.assets.precompile += %w( scaffolds.css )
+
 # Add additional assets to the asset load path.
 # Rails.application.config.assets.paths << Emoji.images_path
 # Add Yarn node_modules folder to the asset load path.

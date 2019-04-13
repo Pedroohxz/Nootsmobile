@@ -4,7 +4,6 @@ class MateriasController < ApplicationController
       
         @noot = Noot.new
         render layout: 'materias'
-        
     end
     def vamo
 @noots = Noot.all
