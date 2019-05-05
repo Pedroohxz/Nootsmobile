@@ -20,6 +20,6 @@ class MateriasController < ApplicationController
     def create
       @noot = Noot.new(params[:noot])
       @noot.save
-      redirect_to @noot
+   
     end
 end

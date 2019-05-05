@@ -9,90 +9,13 @@
     padding: 0px;
     margin: 0px;
 }
-body{
-    background-color: #f5f5f5;
-    position: absolute;
+body {
+  background-image: linear-gradient(to bottom, #0060A2, #3982C1);
 
 }
 
-
-label#logo {
-    cursor: default;
-    margin-top: 50px;
-    font-family: 'Indie Flower', cursive;
-    font-size: 32pt;
-    color: rgb(14, 240, 191)
-
-}
-div#item1 {
-    text-decoration: none;
-    margin-top: 80px;
-    cursor: default;
-    background-image: linear-gradient(to right, transparent, rgb(26, 151, 201, 0.384));
-    margin-left: 50px;
-    font-family: 'Comfortaa', cursive;
-    padding-left: 16px;
-    font-size: 12pt;
-    color: white;
-    padding: 18px;
-
-
-
-}
-div#item1b {
-    text-decoration: none;
-    margin-top: 80px;
-    cursor: default;
-    
-
-    font-family: 'Comfortaa', cursive;
-    padding-left: 16px;
-    font-size: 12pt;
-    color: white;
-    padding: 18px;
-    transition: all .5s;
-}
-div#item2, div#item3 {
-    text-decoration: none;
-    font-size: 12pt;
-    text-indent: 5px;
-    color: white;
-    padding: 18px;
-    margin-top: 5px;
-    padding-left: 16px;
-
-    transition: all .5s;
-
-        font-family: 'Comfortaa', cursive;
-
-
-}
-div#item2 {
-    background-image: none;
-}
-div#item2:hover, div#item3:hover, div#item1b:hover{
-
-    background-image: linear-gradient(to right, transparent , rgba(26, 151, 201, 0.384));
-    margin-left: 50px;
-    cursor: pointer;
-
-}
-#a2, #a3 {
-    text-decoration: none;
-    color: white;
-
-    padding-top: 13px;
-    padding-bottom: 40px;
-    padding-right: 125px;
-}
-#a1:focus, #a2:focus, #a3:focus{
-    outline-style: none;
-}
-#a3 {
-    padding-right: 66px;
-}
 section#materias {
-    background-color: #0079CC;
+  background-image: linear-gradient(to bottom, #0060A2, #3982C1);
   
     padding-bottom: 120px;
     padding-left: 10px;
@@ -101,7 +24,7 @@ section#materias {
     width: 100vw;
     margin-top: 1px;
 }
-section#materias span {
+section#materias li span {
     position: fixed;
     margin-top: 280px;
     width: 100%;
@@ -110,10 +33,7 @@ section#materias span {
     color: white
 }
 
-section#materias li{
-
-
-
+#tochoosematerias li{
     padding: 30px;
 
 
@@ -125,14 +45,7 @@ section#materias li{
     margin-left: 50px;
     margin-right: 50px;
     display: inline-block;
-    
-
-    
     transition: all .7s;
-
-
-
-   
      background-repeat: no-repeat;
 background-size: 100%;
 }
@@ -226,6 +139,8 @@ section#materias h1{
     font-family: 'Ubuntu';
     font-weight: 600;
     margin-top: 0px;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 /*ANIMAÇÃO NO CIRCULO DE MATÉRIAS TIPO: 1*/
 
@@ -305,6 +220,17 @@ div#mask {
 
 
 }
+
+#mask2 {
+  width: 100vw;
+   z-index: 2;
+   position: fixed;
+   transition: all .5s;
+   height: 110%;
+   background-color: rgba(48, 48, 48, .7);
+   display: none;
+}
+
 div#pop-up {
     display: initial;
     z-index: 2;
@@ -400,6 +326,9 @@ p {
 
     display: none;
 
+}
+.field4 {
+    display: none;
 }
 .field3 {
     margin-top: 10px;
@@ -536,3 +465,212 @@ div#teste {
    
    
 }
+
+
+
+
+
+.main-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+   
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transition: all .3s;
+  }
+  
+  .main-nav.is-open {
+    opacity: 1;
+    z-index: 100;
+    visibility: visible;
+  }
+  
+  /* Yellow band effect */
+  .main-nav::before {
+   content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -6px;
+    background: #083775;
+    transform-origin: 0 0;
+    transform: skew(-14deg) translateX(-120%);
+    transition: all .275s;
+    height: 120vh;
+    
+  }
+  
+  .main-nav.is-open::before {
+    transform: skew(-14deg) translateX(0);
+  }
+  
+  /* Skewing effect on menu links */
+  .main-nav ul {
+    display: inline-flex;
+    flex-direction: column;
+     /* Should be 100%, but we have a notice message :D */
+    align-items: flex-end;
+    justify-content: center;
+    transform: translateX(-18%) skew(-16deg);
+  }
+  
+  .main-nav li {
+    display: block;
+    margin: .5rem 0;
+    text-align: right;
+    transform: skew(16deg);
+    transition: all .3s;
+    
+  }
+  
+  /* Apparition effect on links */
+  .main-nav a {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  
+  .main-nav.is-open a {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .main-nav li:nth-child(1) a {
+  transition: all 275ms 
+  }
+  .main-nav li:nth-child(2) a {
+  transition: all 275ms 
+  }
+  .main-nav li:nth-child(3) a {
+  transition: all 275ms 
+  }
+  .main-nav li:nth-child(4) a {
+  transition: all 275ms 
+  }
+  .main-nav li:nth-child(5) a {
+  transition: all 275ms 
+  }
+  
+  
+  /* Decoration */
+  .main-nav ul {
+  list-style: none;
+  padding: 0;
+  padding-top: 100px;
+  transition: all .3s;
+  width: 160px;
+  position: fixed;
+  
+  }
+
+.main-nav li {
+    list-style: none;
+    padding: 0;
+    padding-top: 100px;
+    transition: all .3s;
+    width: 160px;
+  }
+  .main-nav a {
+  display: block;
+  padding: 12px 0;
+  color: cyan;
+  font-size: 4.3em;
+  text-decoration: none;
+  font-weight: 500;
+  }
+  
+  /* Burger Style: @see: https://codepen.io/CreativeJuiz/full/oMZNXy */
+  .open-main-nav {
+  position: fixed;
+  top: 25px;
+  padding-top: 50px;
+  right: 20px;
+  z-index: 1000;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  }
+  .open-main-nav:focus {
+  outline: none;
+  }
+  .burger {
+  position: relative;
+  display: block;
+  width: 56px;
+  height: 4px;
+  margin: 0 auto;
+  background: cyan;
+  transform: skew(5deg);
+  transition: all .275s;
+  }
+  
+  .burger:after,
+  .burger:before {
+  content: '';
+  display: block;
+  height: 100%;
+  background: cyan;
+  transition: all .275s;
+  }
+  
+  .burger:after {
+  transform: translateY(-12px) translateX(-2px) skew(-20deg);
+  }
+  
+  .burger:before {
+  transform: translateY(-16px) skew(-10deg);
+  }
+  
+  /* Toggle State part */
+  .is-open .burger {
+  transform: skew(5deg) translateY(-8px) rotate(-45deg);
+  }
+  
+  .is-open .burger:before {
+  transform: translateY(0px) skew(-10deg) rotate(75deg);
+  }
+  
+  .is-open .burger:after {
+  transform: translateY(-12px) translateX(10px) skew(-20deg);
+    opacity: 0;
+  }
+  
+  /* MENU Text part */
+  
+  .burger-text {
+  display: block;
+  font-size: 2.375rem;
+  letter-spacing: .05em;
+  margin-top: .5em;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+  color: cyan;
+  }
+  
+  
+  .container {
+  position: absolute;
+  top: 0; right: 0;
+  bottom: 0; left: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #eee, #ddd);
+  }
+  
+  
+  
+  /* When slowmotion is activated */
+  #first {
+    margin-top: 90px;
+  }
+  li a:hover {
+    color: dodgerblue;
+    background-color: transparent;
+  }
+  nav {
+      box-shadow: none;
+  }

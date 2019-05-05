@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_13_123140) do
+ActiveRecord::Schema.define(version: 2019_04_14_115507) do
 
   create_table "noots", force: :cascade do |t|
     t.string "materia"
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2019_04_13_123140) do
     t.float "nota_bimestral"
     t.integer "bimestre"
     t.float "media"
-    t.string "name"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|

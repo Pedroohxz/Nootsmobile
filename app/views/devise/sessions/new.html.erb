@@ -1,26 +1,58 @@
-<h2>Log in</h2>
+<center><h2>Bem Vindo</h2></center>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
 
-  <% if devise_mapping.rememberable? %>
+
+<div id="yes">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+     
+    
+
     <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+    
+   
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", :placeholder => "Email" %>
+     
+    </div>
+
+    <div class="field">
+      
+      <%= f.password_field :password, autocomplete: "current-password", :placeholder => "Senha" %>
+    </div>
+    </br>
+
+    <% if devise_mapping.rememberable? %>
+
+      <div class="field2">
+      <div class="center">
+    
+      <div class="wrap">
+
+
+    <div class="page__toggle">
+      <label class="toggle">
+        <input class="toggle__input" type="checkbox">
+        <span class="toggle__label">
+          <span class="toggle__text">Lembrar da senha?</span>
+        </span>
+      </label>
+    </div>
+
+
+
+
+
+        </div>
+      </div><br><br>
+    <% end %>
+
+    <div class="actions">
+      <center><%= f.submit "Entrar", :id => "lindo", class: "btn waves-effect waves-light"%></center>
+    <br>
     </div>
   <% end %>
+</div>
 
-  <div class="actions">
-    <%= f.submit "Log in", :id => "lindo" %>
-  </div>
-<% end %>
 
-<%= render "devise/shared/links" %>
+
+<center> <%= render "devise/shared/links" %> </center>

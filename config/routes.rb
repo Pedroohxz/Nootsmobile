@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users, :controllers => { :registrations =>
-    'users/registrations' }
+  devise_for :users
   
     get '/sign_out' => 'users/sessions#destroy'
+    
 
   resources :users
   

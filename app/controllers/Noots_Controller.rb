@@ -3,9 +3,9 @@ class NootsController < ApplicationController
 
   # GET /noots
   # GET /noots.json
+  include Devise::Controllers::Helpers 
   def index
-      @noots = Noot.order(bimestre: :asc)
-   
+       @noots = Noot.where(user_id: current_user)
   end
       
   # GET /noots/1
@@ -44,7 +44,7 @@ class NootsController < ApplicationController
   # PATCH/PUT /noots/1.json
   def update
     @noot= Noot.find(params[:id])
-		noot_params =  params.require(:noot).permit(:materia, :nota_mensal, :nota_bimestral, :bimestre)
+		noot_params =  params.require(:noot).permit(:materia, :nota_mensal, :nota_bimestral, :bimestre, :user_id)
     @noot.update(noot_params)
     redirect_to '/noots'
  
@@ -54,10 +54,7 @@ class NootsController < ApplicationController
   # DELETE /noots/1.json
   def destroy
     @noot.destroy
-    respond_to do |format|
-      format.html { redirect_to noots_url, notice: 'Noot was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    
   end
 
   private
@@ -68,6 +65,6 @@ class NootsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def noot_params
-      params.require(:noot).permit(:materia, :nota_mensal, :nota_bimestral, :bimestre)
+      params.require(:noot).permit(:materia, :nota_mensal, :nota_bimestral, :bimestre, :user_id)
     end
 end

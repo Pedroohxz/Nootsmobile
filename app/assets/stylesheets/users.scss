@@ -1,0 +1,504 @@
+
+html {
+  position: fixed;
+  width: 100vw;
+  background-image: linear-gradient(to bottom right, #002D7F, dodgerblue);
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, #002D7F, dodgerblue);
+}
+h2 {
+    font-family: 'Ubuntu';
+    font-size: 5rem;
+    color: dodgerblue;
+
+    margin-top: 5%;
+}
+label {
+    font-family: 'Roboto';
+    font-size: 2.5rem;
+    color: rgba(255,255,255,.8);
+}
+label#remember {
+    font-size: 1.7rem;
+}
+#field2{
+    float: right;
+}
+section.login {
+    background-color: #1060C1;
+    width: 60%;
+    height: 40%;
+    margin-top: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5%;
+    box-shadow: 10px 10px 10px rgba(0,0,0,.27);
+    font-size: 2rem;
+}
+#lindo {
+  font-size: 2.7rem;
+  color: rgba(255, 255, 255,.7);
+  left: 0;
+  right: 0;
+  width: 82vw;
+  height: 5.7rem;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  
+}
+#yes {
+    margin-left: 9%;
+    margin-right: 9%;
+    margin-top: 40%;
+    margin-bottom: auto;
+ 
+}
+a {
+    text-decoration: none;
+    color: rgba(255,255,255,.3);
+    font-size: 25pt;
+    font-family: 'Roboto';
+    transition: all .2s;
+}
+a:hover {
+    color: rgba(255,255,255,.6);
+}
+a:visited {
+    color: rgba(255,255,255,.6);
+}
+#separator {
+    color: black;
+    font-size: 24pt;
+}
+
+
+input:not([type]),
+input[type=text]:not(.browser-default),
+input[type=password]:not(.browser-default),
+input[type=email]:not(.browser-default),
+input[type=number]:not(.browser-default),
+textarea.materialize-textarea {
+  /*OPAAA*/
+  background-color: rgba(255,255,255,.3);
+    border: none;
+    /* border-bottom: 1px solid white; */
+    color: rgba(0,0,0,.7);
+    border-radius: 90px;
+    outline: none;
+    height: 5.7rem;
+    width: 82vw;
+    font-size: 27pt;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 0 32px 0;
+    padding: 0;
+    text-align: center;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: box-shadow .3s, border .3s, width .3s;
+
+}
+
+input:not([type]):disabled, input:not([type])[readonly="readonly"],
+input[type=text]:not(.browser-default):disabled,
+input[type=text]:not(.browser-default)[readonly="readonly"],
+input[type=password]:not(.browser-default):disabled,
+input[type=password]:not(.browser-default)[readonly="readonly"],
+input[type=email]:not(.browser-default):disabled,
+input[type=email]:not(.browser-default)[readonly="readonly"],
+input[type=number]:not(.browser-default):disabled,
+input[type=number]:not(.browser-default)[readonly="readonly"],
+textarea.materialize-textarea:disabled,
+textarea.materialize-textarea[readonly="readonly"] {
+  color: rgba(0,0,0,.7);
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.42);
+}
+
+input:not([type]):disabled + label,
+input:not([type])[readonly="readonly"] + label,
+input[type=text]:not(.browser-default):disabled + label,
+input[type=text]:not(.browser-default)[readonly="readonly"] + label,
+input[type=password]:not(.browser-default):disabled + label,
+input[type=password]:not(.browser-default)[readonly="readonly"] + label,
+input[type=email]:not(.browser-default):disabled + label,
+input[type=email]:not(.browser-default)[readonly="readonly"] + label,
+input[type=number]:not(.browser-default):disabled + label,
+input[type=number]:not(.browser-default)[readonly="readonly"] + label,
+textarea.materialize-textarea:disabled + label,
+textarea.materialize-textarea[readonly="readonly"] + label {
+  color: rgba(0,0,0,.7);
+}
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  /*ACHAR*/
+  border-bottom: 2px solid rgb(66, 236, 255);
+
+          
+          text-align: center;
+          color: rgba(0,0,0,.7);
+           
+}
+
+input:not([type]):focus.valid ~ label,
+input[type=text]:not(.browser-default):focus.valid ~ label,
+input[type=password]:not(.browser-default):focus.valid ~ label,
+input[type=email]:not(.browser-default):focus.valid ~ label,
+input[type=number]:not(.browser-default):focus.valid ~ label,
+textarea.materialize-textarea:focus.valid ~ label {
+  color: rgba(0,0,0,.7);
+}
+
+
+
+input:not([type]).validate + label,
+input[type=text]:not(.browser-default).validate + label,
+input[type=password]:not(.browser-default).validate + label,
+input[type=email]:not(.browser-default).validate + label,
+input[type=number]:not(.browser-default).validate + label,
+textarea.materialize-textarea.validate + label {
+  width: 80%;
+}
+
+/* Validation Sass Placeholders */
+input.valid:not([type]), input.valid:not([type]):focus,
+input.valid[type=text]:not(.browser-default),
+input.valid[type=text]:not(.browser-default):focus,
+input.valid[type=password]:not(.browser-default),
+input.valid[type=password]:not(.browser-default):focus,
+input.valid[type=email]:not(.browser-default),
+input.valid[type=email]:not(.browser-default):focus,
+input.valid[type=number]:not(.browser-default),
+input.valid[type=number]:not(.browser-default):focus,
+textarea.materialize-textarea.valid,
+textarea.materialize-textarea.valid:focus, .select-wrapper.valid > input.select-dropdown {
+  /*ACHAR 2*/
+  border-bottom: 1px solid rgb(0, 121, 134);
+  -webkit-box-shadow: 0 1px 0 0 rgb(0, 121, 134);
+          box-shadow: 0 1px 0 0 rgb(0, 121, 134);
+          width: 60%;
+}
+
+.waves-effect {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: middle;
+    z-index: 1;
+    -webkit-transition: .3s ease-out;
+    transition: .3s ease-out;
+    border-radius: 90px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+   
+  }
+  
+  .waves-effect .waves-ripple {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 0.7s ease-out;
+    transition: all 0.7s ease-out;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    transition-property: transform, opacity;
+    transition-property: transform, opacity, -webkit-transform;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    pointer-events: none;
+    cursor: pointer;
+  }
+  
+  .waves-effect input[type="button"], .waves-effect input[type="reset"], .waves-effect input[type="submit"] {
+    border: 0;
+    font-style: normal;
+    font-size: inherit;
+    text-transform: inherit;
+    background: none;
+    
+    
+      vertical-align: bottom;
+      width: 23vh;
+      
+      cursor: pointer;
+      padding: 13px;
+      height: 60px;
+     
+      background-color:#093260;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+      
+    
+  }
+  .waves-effect:hover {
+    background-color: rgba(30, 144, 255,1);
+    
+  }
+  
+  .waves-effect img {
+    position: relative;
+    z-index: -1;
+  }
+  
+  .waves-notransition {
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+  
+  .waves-circle {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+   
+  }
+  
+  
+  .waves-input-wrapper .waves-button-input {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  
+   
+  }
+  
+  .waves-circle {
+    text-align: center;
+    width: 2.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+    border-radius: 50%;
+   
+  }
+  
+.waves-block {
+    display: block;
+  }
+  
+  /* Firefox Bug: link not triggered */
+.waves-effect .waves-ripple {
+    z-index: -1;
+  }
+#cbx {
+ size: 32px 32px;
+  }
+
+  /*
+P.S: if you like my content maybe you will become a donator and donate some money? That helps me to create new awesome materials. https://www.paypal.me/melnik909
+*/
+
+/*
+I've used nested span elements for creating an animation of square turn and creating an arrow animation. But if you know other a solution please email me
+melnik909@ya.ru
+*/
+
+/*
+=====
+LEVEL 1. CORE STYLES
+=====
+*/
+
+.toggle{
+  --uiToggleSize: var(--toggleSize, 20px);
+  --uiToggleIndent: var(--toggleIndent, .4em);
+  --uiToggleBorderWidth: var(--toggleBorderWidth, 2px);
+  --uiToggleColor: var(--toggleColor, #000);
+  --uiToggleDisabledColor: var(--toggleDisabledColor, #868e96);
+  --uiToggleBgColor: var(--toggleBgColor, #fff);
+  --uiToggleArrowWidth: var(--toggleArrowWidth, 2px);
+  --uiToggleArrowColor: var(--toggleArrowColor, #fff);
+
+  display: inline-block;
+  position: relative;
+}
+
+.toggle__input{
+  position: absolute;
+  left: -99999px;
+}
+
+.toggle__label{
+  display: inline-flex;
+  cursor: pointer;
+  min-height: var(--uiToggleSize);
+  padding-left: calc(var(--uiToggleSize) + var(--uiToggleIndent));
+}
+
+.toggle__label:before, .toggle__label:after{
+  content: "";
+  box-sizing: border-box;  
+  width: 1em;
+  height: 1em;
+  font-size: var(--uiToggleSize);
+
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.toggle__label:before{
+  border: var(--uiToggleBorderWidth) solid var(--uiToggleColor);
+  z-index: 2;
+}
+
+.toggle__input:disabled ~ .toggle__label:before{
+  border-color: var(--uiToggleDisabledColor);
+}
+
+.toggle__input:focus ~ .toggle__label:before{
+  box-shadow: 0 0 0 2px var(--uiToggleBgColor), 0 0 0px 4px var(--uiToggleColor);
+}
+
+.toggle__input:not(:disabled):checked:focus ~ .toggle__label:after{
+  box-shadow: 0 0 0 2px var(--uiToggleBgColor), 0 0 0px 4px var(--uiToggleColor);
+}
+
+.toggle__input:not(:disabled) ~ .toggle__label:after{
+  background-color: var(--uiToggleColor);
+  opacity: 0;
+}
+
+.toggle__input:not(:disabled):checked ~ .toggle__label:after{
+  opacity: 1;
+}
+
+.toggle__text{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+div.page {
+  margin-top: 7%;
+}
+label.toggle {
+  font-size: 1.7rem;
+}
+/*
+The arrow size and position depends from sizes of square because I needed an arrow correct positioning from the top left corner of the element toggle
+*/
+
+.toggle__text:before{
+  content: "";
+  box-sizing: border-box;
+  width: 0;
+  height: 0;
+  font-size: var(--uiToggleSize);
+
+  border-left-width: 0;
+  border-bottom-width: 0;
+  border-left-style: solid;
+  border-bottom-style: solid;
+  border-color: var(--uiToggleArrowColor);
+
+  position: absolute;
+  top: .5428em;
+  left: .2em;
+  z-index: 3;
+
+  transform-origin: left top;
+  transform: rotate(-40deg) skew(10deg);
+}
+
+.toggle__input:not(:disabled):checked ~ .toggle__label .toggle__text:before{
+  width: .5em;
+  height: .25em;
+  border-left-width: var(--uiToggleArrowWidth);
+  border-bottom-width: var(--uiToggleArrowWidth);
+  will-change: width, height;
+  transition: width .1s ease-out .2s, height .2s ease-out;
+}
+
+/*
+=====
+LEVEL 2. PRESENTATION STYLES
+=====
+*/
+
+/* 
+The demo skin
+*/
+
+.toggle__label:before, .toggle__label:after{
+  border-radius: 2px;
+}
+
+/* 
+The animation of switching states
+*/
+
+.toggle__input:not(:disabled) ~ .toggle__label:before,
+.toggle__input:not(:disabled) ~ .toggle__label:after{
+  opacity: 1;
+  transform-origin: center center;
+  will-change: transform;
+  transition: transform .2s ease-out;
+}
+
+.toggle__input:not(:disabled) ~ .toggle__label:before{
+  transform: rotateY(0deg);
+  transition-delay: .2s;
+}
+
+.toggle__input:not(:disabled) ~ .toggle__label:after{
+  transform: rotateY(90deg);
+}
+
+.toggle__input:not(:disabled):checked ~ .toggle__label:before{
+  transform: rotateY(-90deg);
+  transition-delay: 0s;
+}
+
+.toggle__input:not(:disabled):checked ~ .toggle__label:after{
+  transform: rotateY(0deg);
+  transition-delay: .2s;
+}
+
+.toggle__text:before{
+  opacity: 0;
+}
+
+.toggle__input:not(:disabled):checked ~ .toggle__label .toggle__text:before{
+  opacity: 1;
+  transition: opacity .1s ease-out .3s, width .1s ease-out .5s, height .2s ease-out .3s;
+}
+
+/*
+=====
+LEVEL 3. SETTINGS
+=====
+*/
+
+.toggle{
+  --toggleColor: #1E90FF;
+  --toggleBgColor: #002D7F;
+  --toggleSize: 35px;
+}
+
+
+::placeholder {
+  color: rgba(255,255,255,.7);
+  font-size: 26pt;
+  text-align: left;
+  padding-left: 50px;
+}
+/* TEXT INPUT MATERIAL DESING GOOGLE */
+div.wrap {
+  margin-left: 65%;
+}

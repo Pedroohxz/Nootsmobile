@@ -3,21 +3,19 @@
 <head>
     <meta charset="utf-8" />
     <title>Notas - Noots</title>
+    
 
-
-
-
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 
 <body>
-<!-- AREA DE MENU-->
-   
-
 <section id="interface"> 
 
 <div id="top">
   
     <h1 id="titulo"><center>Notas por Bimestre</center></h1>
+    
   
 </div>
        <section id="materias" >
@@ -32,8 +30,9 @@
             
 <th>
     <select id="#" class="nice-select">
-        <option>Bimestre</option>
-        <option>1º Bimestre</option>  
+
+        <option data-display="Bimestre">Bimestre</option>
+        <option value="1">1º Bimestre</option>  
         <option>2º Bimestre</option>
         <option>3º Bimestre</option>
         <option>4º Bimestre</option>
@@ -45,27 +44,52 @@
 
          <tbody>
            <% @noots.each do |noot| %>
-             <tr id=<%= noot.bimestre %> class="corpo">
-               <td><%= noot.materia %></td>
+             <tr id=<%= noot.id %> class="corpo">
+               <td><%= noot.materia %> </td>
                <td id="nm"><center><%= noot.nota_mensal %></center></td>
                <td id="nb"><center><%= noot.nota_bimestral %></center></td>
+               
+               
             
              
                <td class="bimestre"><center><%= noot.bimestre %></center></td>
            
-               <td><%= link_to 'Média', noot %></td>
-               <td><%= link_to 'Editar', edit_noot_path(noot) %></td>
-               <td><%= link_to 'Excluir', noot, method: :delete, data: { confirm: 'Tem Certeza?' }, id:"delete" %></td>
-               
+
+           
+
+              
+               <div id="actions">
+                <td>
+                  <ul id="lista">
+              <li id="editar" >
+                
+               <%= link_to 'edit', edit_noot_path(noot), :class => "medium material-icons" %>
+            
+           </li>
+         
+              <li id="detalhes">
+                 <%= link_to 'info', noot, :class => "medium material-icons" %> 
+               </li>
+              <li id="excluir" class="<%= noot.id %>" >
+              <%= link_to 'delete', noot_path(noot), method: :delete, :class => "medium material-icons", :id => noot.id, :confirm "Gostaria de excluir esta nota?" %> 
+            </li>
+              </ul>
+            </td>
+                
+            </div>
+        
                </tr>
            <% end %>
+
+
          </tbody>
        </table>
 
        <br>
       
-       <%= link_to 'Nova Nota', materias_path %>
-      
+      <center>
+      <div id="sub">  <a href="/materias" id="new">Nova nota</a> </div>
+      </center>
 
 
 
@@ -75,20 +99,27 @@
     </section>
 
   
-        <div id="circlemenu">a</div>
- 
-    <section class="menu-left">
-      <section id="fixed">
-        
- 
-        <div id="circlematerias2"  onclick="window.location='/';"></div>
-    
+      
 
-        <div id="circlenoots2"></div>
-        <div id="circlelownoots2" onclick="window.location='/lownoots';"></div>
-    
-    </section>
-</section>
-    </div>
+
+		<button id="burger" class="open-main-nav">
+			<span class="burger"></span>
+			<span class="burger-text">Menu</span>
+		</button>
+		<nav class="main-nav" id="main-nav">
+			<ul>
+				<li>
+					<a href="/materias" id="first">Matérias</a>
+				</li>
+				<li>
+					<a href="/noots">Notas</a>
+				</li>
+				<li>
+					<a href="/lownoots">Piores Notas</a>
+				</li>
+			
+			</ul>
+		</nav>
+
   </body>
 </html>

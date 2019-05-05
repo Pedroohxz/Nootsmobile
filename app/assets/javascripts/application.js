@@ -9,14 +9,14 @@
 
 
 $(document).ready(function() {
-  
+ 
     $("ul#tochoosematerias li").click(function(){
         
       
       
         
         $("#mask").fadeIn("fast");
-        $("#pop-up").fadeIn("slow");
+        $("#pop-up").fadeIn("fast");
         $("#close").css("display", "initial");
         $("#shownoots").css("display", "initial");
 
@@ -118,11 +118,6 @@ $(document).ready(function() {
      
        
     });
-
-    
-
-
-
         $("#gap").click(function(){
         
         var valor = $("#gap").text();
@@ -148,18 +143,23 @@ $(document).ready(function() {
              $("#noot_bimestre").val(valor);
         });
 
+
         
-          $(document).ready(function() {
+$(document).ready(function() {
+           
             $('select').selectmenu();
              $('select').select();
 });
+
+
+    $(document).ready(function() {
         $('select').change(function() { 
 
-            number = parseInt($('span.nice-select').text(), 5);
+            number = parseInt($('span.nice-select').text(), 4);
            
             if(number <= 4) {
             $("table tr.corpo").hide();
-            $("table tbody tr td.bimestre:contains("+number+")").parent().show();
+            $("table tbody tr td.bimestre:contains(" + number + ")").parent().show();
             }
             else{
             
@@ -167,21 +167,47 @@ $(document).ready(function() {
             }
             
         });
-        $(document).ready(function() { 
-          $("#tochoosematerias").click(function() {
-        document.getElementById("piores").style.backgroundImage = 'icons/p.png';
+     });
+  
+    
+
      
-        });
+       
+
+    
+    
+      let burger = document.getElementById('burger'),
+	    nav    = document.getElementById('main-nav');
+
+      burger.addEventListener('click', function(e){
+	    this.classList.toggle('is-open');
+	    nav.classList.toggle('is-open');
     });
-        /*
-Reference: http://jsfiddle.net/BB3JK/47/
-*/
+
+
+/* Onload demo - dirty timeout */
+let clickEvent = new Event('click');
+
+window.addEventListener('load', function(e) {
+	
+	burger.dispatchEvent(clickEvent);
+	
+	setTimeout(function(){
+		burger.dispatchEvent(clickEvent);
+		
+		
+	}, 5500);
+
+});
+$(document).ready(function() {
+
+
+$("a").click(function() {
     
-    
+    var vish = $("#excluir").attr('class');
+    $("tr:contains("+ vish +")").css("display", "none");
+   
+});
 });
 
-function refresh() {
-        location.reload();
-
-    }
-    
+});

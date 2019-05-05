@@ -16,7 +16,7 @@ gem 'debase', '~> 0.2.2'
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 5.0', '>= 5.0.4'
 gem 'compass', '~> 1.0', '>= 1.0.3'
 gem "sprockets-sass"
 gem 'rails_12factor', group: :production
@@ -32,6 +32,7 @@ gem 'turbolinks'
 # Jquery Gem
 gem 'jquery-rails'
 
+
 # Materalize Gem
 gem 'materialize-sass'
 gem 'material_icons'
@@ -41,7 +42,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'sqlite3', '~> 1.3.13'
+gem 'pg'
 gem 'devise'
 gem 'cancancan'
 # Use Capistrano for deployment

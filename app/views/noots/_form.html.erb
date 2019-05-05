@@ -32,16 +32,23 @@
     <%= form.text_field :nota_mensal, id: :noot_nota_mensal %>
     </div>
 
-  <div class="field">
+  <div class="field2">
     <%= form.label :nota_bimestral %>
     
     <%= form.text_field :nota_bimestral, id: :noot_nota_bimestral %>
   </div>
 
-  <div class="field2">
+  <div class="field5">
   <%= form.label :bimestre %>
  
   <%= form.text_field :bimestre, id: :noot_bimestre %>
+  </div>
+
+  <div class="field4">
+  <%= form.label :user_id %>
+ 
+  <%= form.text_field :user_id, id: :noot_user_id %>
+  <%= current_user.id %>
   </div>
 
   <div class="actions">
